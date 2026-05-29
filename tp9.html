@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="stylestp9.css">
+        <title> Registro de Torneo Gamer</title>
+    </head>
+    <body>
+        <div class="contenedor">
+            <h1>Inscripcion al Torneo</h1>
+            <section class="formulario">
+                <h2>Datos del Jugador</h2>
+                <label>Nickname</label>
+                <input type="text" id="nickname" placeholder="Ingrese su nickname debe contener al menos 3 caracteres">
+                <p class="error" id="errorNickname"></p>
+
+                <label>Edad del Jugador</label>
+                <input type="text" id="edad"  placeholder="Debe ser mayor a 16">
+                <p class="error" id="errorEdad"></p>
+
+                <label>Codigo de equipo</label>
+                <input type = "text" id="codigo"  placeholder="Deben ser 4 digitos">
+                <p class="error" id="errorCodigo"></p>
+
+                <p class="error"   id="errorJuego"></p>
+
+                <button onclick="registrarJuego()">registrarse</button>
+
+            </section>
+            <section>
+                <h2>Seleccionar Juego</h2>
+                <div class="grilla">
+                    <div class="tarjeta" onclick="seleccionarJuego(this, 'Minecraft')">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/5/51/Minecraft_cover.png" alt="Minecraft" width="120"> 
+                        <p>Minecraft</p>
+                    </div>
+                    <div class="tarjeta" onclick="seleccionarJuego(this,'Fortnite')">
+                        <img src="https://cdn2.unrealengine.com/fortnite-chapter-5-season-3-key-art-1920x1080-1920x1080-af1f5c4c4b41.jpg" alt="Fortnite" width="120">
+                        <p>Fortnite</p>
+                    </div>
+                     <div class="tarjeta" onclick="seleccionarJuego(this,'Valorant')">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/9/97/Valorant_cover.jpg" alt="Valorant" width="120">
+                        <p>Valorant</p>
+                    </div>
+                    <div class="tarjeta" onclick="seleccionarJuego(this, 'FIFA 22')">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/f/f5/EA_Sports_FC_25_cover.jpg" alt="FIFA25" width="120">
+                        <p>FIFA25</p>
+                    </div>
+                    <div class="tarjeta" onclick="seleccionarJuego(this, 'Among Us')">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/9/93/Among_Us_cover_art.jpg" alt="Among Us" width="120">
+                        <p>Among us</p>
+                    </div>
+                    <div class="tarjeta" onclick="seleccionarJuego(this, 'Rocket League')">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/a/ac/Rocket_League_coverart.jpg" alt="Rocket League" width="120">
+                        <p>Rocket League</p>
+                    </div>
+                </div>
+            </section>
+            <button id="btnPreparacion" onclick="hacerPreguntas()">
+                Preparacion
+            </button>
+            <div id="respuestas"></div>
+        </div>
+        <script src="tp9script.js"></script>
+    </body>
+</html>
